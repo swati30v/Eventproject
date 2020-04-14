@@ -10,6 +10,19 @@
     </ul>
   </div>
 </nav>
+<!-- end topbar -->
+<h1>Hi {{currentUser.firstName}}!</h1>
+<p>You're logged in with Angular 8!!</p>
+<h3>All registered users:</h3>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.firstName}} ({{user.lastName}} {{user.lastName}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li>
+</ul>
+
+
+<!-- end home work  -->
 <div class="task">
                 
                 <button type="button" routerLink="/editprofile" class="btn btn-success">Edit Profile</button>
